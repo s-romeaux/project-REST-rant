@@ -1,0 +1,33 @@
+{
+    "name": "project-REST-rant",
+    "version": "1.0.0",
+    "engines": {
+    "node": "16.11.1"
+    },
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+    },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackerUSA-CE/project-REST-rant.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "",
+    "bugs": {
+    "url": "https://github.com/HackerUSA-CE/project-REST-rant/issues"
+    },
+    "homepage": "https://github.com/HackerUSA-CE/project-REST-rant#readme",
+    "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+    }
+}
