@@ -6,7 +6,7 @@ function Def (html) {
             <head>
                 <title>RestRant Live Demo</title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-                <link rel="stylesheet" href="/css/style.css"/>
+                <link rel="stylesheet" href="./css/style.css"/>
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -26,13 +26,13 @@ function Def (html) {
                         </li>
                     </ul>
                 </nav>
-                {html.children}
+                <div id="root">
+                    <div className="content">{html.children}</div>
+                    <div className="footer">This is a sticky footer.</div>
+                </div>
             </body>
         </html>
     )
 }
 
 module.exports = Def
-
-
-
