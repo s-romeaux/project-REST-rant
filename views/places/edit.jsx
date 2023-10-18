@@ -32,10 +32,10 @@ function edit_form (data) {
                     </div>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="cuisines">Cuisines</label>
-                    <input className="form-control" id="cuisines" name="cuisines" value={data.place.cuisines} required />
-                </div>
-                <input className="btn btn-primary" type="submit" value="Update Place" />
+                        <label htmlFor="cuisines">Cuisines</label>
+                        <input className="form-control" id="cuisines" name="cuisines" value={data.place.cuisines} required />
+                    </div>
+                    <input className="btn btn-primary" type="submit" value="Update Place" />
             </form>
         </main>
         </Def>
