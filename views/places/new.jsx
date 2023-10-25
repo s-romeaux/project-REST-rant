@@ -76,21 +76,21 @@ function new_form (data) {
                 <div className="row">
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place Name</label>
-                            <input className="form-control" id="name" name="name" required />
+                            <input className="form-control" id="name" name="name" required defaultValue={data.place ? data.place.name : ''} />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="pic">Place Picture</label>
-                            <input className="form-control" id="pic" name="pic" />
+                            <input className="form-control" id="pic" name="pic" defaultValue={data.place ? data.place.pic : ''} />
                     </div>
                 </div>
                 <div className="row">
                     <div className="form-group col-sm-4">
                         <label htmlFor="city">City</label>
-                            <input className="form-control" id="city" name="city" />
+                            <input className="form-control" id="city" name="city" defaultValue={data.place ? data.place.city : ''} />
                     </div>
                     <div className="form-group col-sm-4">
                         <label htmlFor="state">State</label>
-                            <select className="form-control" id="state" name="state">
+                            <select className="form-control" id="state" name="state" value={data.place ? data.place.state : ''}>
                                 {sortedStates.map((state, index) => (
                                 <option key={index} value={state.code}>
                                     {state.name} ({state.code})
@@ -100,12 +100,21 @@ function new_form (data) {
                     </div>
                     <div className="form-group col-sm-4">
                         <label htmlFor="founded">Founded Year</label>
-                            <input type="number" className="form-control" id="founded" name="founded" defaultValue={new Date().getFullYear()} />
+                        <input
+                            type="number" 
+                            className="form-control" 
+                            id="founded" 
+                            name="founded" 
+                            defaultValue={new Date().getFullYear()}
+                            // min={1776}
+                            // max={new Date().getFullYear()}
+                        />
                     </div>
+
                 </div>
                 <div className="form-group">
                     <label htmlFor="cuisines">Cuisines</label>
-                        <input className="form-control" id="cuisines" name="cuisines" required />
+                        <input className="form-control" id="cuisines" name="cuisines" required defaultValue={data.place ? data.place.cuisines : ''} />
                 </div>
                     <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
