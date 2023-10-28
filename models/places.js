@@ -7,7 +7,8 @@ const placeSchema = new mongoose.Schema({
     state: { type: String, default: 'ST' },
     founded: {     type: Number,
         min: [1776, 'There\'s no way they survived the Pandemic of 2020.'],
-        max: [new Date().getFullYear(), 'Don\'t get ahead of yourself.'] }
+        max: [new Date().getFullYear(), 'Don\'t get ahead of yourself.'] },
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
 })
 
 placeSchema.methods.showEstablished = function() {

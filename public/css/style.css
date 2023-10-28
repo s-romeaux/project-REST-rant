@@ -80,3 +80,21 @@ html, body {
 .btn-warning {
     margin-right: 10px;
 }
+
+  /* Styling for the custom checkbox appearance */
+  input#rant[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 1px solid #adb5bd;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  
+  /* Styling for the checked state of the custom checkbox */
+  input#rant[type="checkbox"]:checked + label::before {
+    background: #007bff; /* Change this to the color you prefer for the checked state */
+  }
+  
