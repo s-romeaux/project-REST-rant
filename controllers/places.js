@@ -96,6 +96,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
+// Make Comment
 router.post('/:id/comment', (req, res) => {
     console.log('post comment', req.body)
     if (req.body.author === '') { req.body.author = undefined }
@@ -122,6 +123,7 @@ router.post('/:id/comment', (req, res) => {
         })
 })
 
+// Delete comment   
 router.delete('/:id/comment/:commentId', (req, res) => {
     db.Comment.findByIdAndDelete(req.params.commentId)
         .then(() => {
