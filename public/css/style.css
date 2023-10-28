@@ -77,3 +77,6 @@ html, body {
     height: 60px; 
     background-color: #f5f5f5; 
 }
+.btn-warning {
+    margin-right: 10px;
+}
