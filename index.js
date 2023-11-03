@@ -1,6 +1,5 @@
 //Modules and Globals
 require('dotenv').config()
-console.log('Testing console logging...')
 const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
